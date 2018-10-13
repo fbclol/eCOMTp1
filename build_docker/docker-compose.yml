@@ -1,0 +1,21 @@
+version: '3'
+
+networks:
+  traefik:
+    external: true
+
+services:
+
+  ecom_franck:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name : ecom_franck
+    networks:
+      - traefik
+    labels:
+      - "traefik.frontend.rule=Host:franckShop.fbclol.fr"
+      - "traefik.port=80"
+      - "traefik.backend=ecom_franck"
+      - "traefik.frontend.entryPoints=http,https"
+      - "traefik.docker.network=traefik"
