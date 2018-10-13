@@ -563,7 +563,6 @@ body{
     font-size: 0.875em;
 }
 .status-grid-head{
-    background: url(../images/status-head-pic.png) no-repeat 0px 0px;
     background-size: 100% 100%;
     display: block;
     height: 127px;

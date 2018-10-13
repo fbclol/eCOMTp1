@@ -5,6 +5,7 @@ networks:
     external: true
 
 services:
+
   ecom_franck:
     build:
       context: .
@@ -13,7 +14,8 @@ services:
     networks:
       - traefik
     labels:
-      - "traefik.frontend.rule=Host:franckShop.fbclol.fr"
+      - 'traefik.enable=true'
+      - "traefik.frontend.rule=Host:franckshop.fbclol.fr"
       - "traefik.port=80"
       - "traefik.backend=ecom_franck"
       - "traefik.frontend.entryPoints=http,https"

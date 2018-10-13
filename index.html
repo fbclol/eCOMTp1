@@ -52,9 +52,9 @@
                     <ul>
                         <li class="has-sub"><a href="#">Sub<span class="fa fa-angle-right"></span></a>
                             <ul>
-                                <li><a href="#">perso 1</a></li>
-                                <li><a href="#">perso 2</a></li>
-                                <li><a href="#">perso 3</a></li>
+                                <li><a class="perso1" href="">perso 1</a></li>
+                                <li><a class="perso2" href="">perso 2</a></li>
+                                <li><a class="perso3" href="">perso 3</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -248,7 +248,7 @@
     <div class="row  no-margin">
         <!-- personnage page information -->
         <div class="status-grid">
-            <div class="status-grid-head">
+            <div class="status-grid-head" style="background: url('images/status-head-pic.png') no-repeat 0px 0px;">
                 <div class="col-sm-12">
                     <div class="col-sm-9">
                         <a class="btn icon-btn btn-muted" href="#">
@@ -468,6 +468,7 @@
     $(document).ready(function() {
 
         // display default  first personnage
+
         buildPagePersonnage(personnages[0]);
 
         function buildPagePersonnage(MonPersonnage) {
@@ -477,8 +478,10 @@
         }
 
         function displayPersonnage(MonPersonnage) {
-
-            //todo : faire le background du personnage avec le style
+            if (MonPersonnage.background_image !== undefined) {
+                var urlImage = "url(images/"+MonPersonnage.background_image+") no-repeat 0px 0px;";
+                $('.status-grid-head').attr('style',  'background:'+urlImage);
+            }
             $('#titrePersonnage').text(MonPersonnage.last_name +' '+ MonPersonnage.first_name);
             $("#imgPerso").attr("src","images/"+MonPersonnage.photo_perso);
             $('#nbrAime').text(MonPersonnage.nombre_aime);
@@ -553,6 +556,8 @@
             }
 
         }
+
+
     });
 </script>
 </body>
