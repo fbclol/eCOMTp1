@@ -1295,6 +1295,7 @@ span.pull-left {
 	top:0;
 	left:0;
 }
+
 .featured-slider .featured-item .thumb img {
 	width:100%;
 }
@@ -2656,6 +2657,9 @@ span.pull-left {
 }
 .social-footer a.gplus {
 	background:#dd4b39;
+}
+.social-footer a.instagram {
+	background:#f3d4de;
 }
 .footer .navigation a {
 	display:inline-block;
