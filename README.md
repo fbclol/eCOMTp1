@@ -16,7 +16,7 @@ TP 1 critique muséee.docx
 
 
 #### Mockup de l'application
-![Qrcode](https://github.com/fbclol/eCOMTp1/blob/master/exemple_image/Capture.png?raw=true "Mockup")
+![Mockup](https://github.com/fbclol/eCOMTp1/blob/master/exemple_image/Capture.PNG?raw=true "Mockup")
 
 ### Les 3 personnages complèté sont :
 - Antoine Griezmann
